@@ -1,0 +1,595 @@
+@import "./scss/utils/mixins";
+@import "./scss/utils/variables";
+
+html {
+  font-size: 18px;
+}
+
+.top-header {
+  width: 100vw;
+  height: 4vh;
+  display: flex;
+
+  .social-icon {
+    display: flex;
+    width: 25vw;
+    @include position(3vw, 2vh);
+    p {
+      @include font-face("Proxima Nova Condensed Regular", 700, $text-color);
+      line-height: 1.3rem;
+    }
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  .number-phone {
+    display: flex;
+
+    height: 2vh;
+    @include position(0vw, 2vh);
+    p {
+      @include font-face("Proxima Nova Condensed Regular", 700, $text-color);
+      line-height: 1rem;
+    }
+  }
+  nav {
+    width: 40vw;
+    @include position(22vw, 2vh);
+    ul {
+      display: flex;
+      justify-content: space-around;
+      a {
+        @include font-face("Proxima Nova Condensed Regular", 700, $text-color);
+        text-decoration: none;
+      }
+      :nth-child(1) {
+        a {
+          border-bottom: 2px solid $button-color;
+        }
+      }
+    }
+  }
+}
+.bottom-header {
+  width: 100vw;
+  height: 9vh;
+  display: flex;
+  nav {
+    width: 40vw;
+    @include position(3vw, 3vh);
+    ul {
+      display: flex;
+      justify-content: space-around;
+      a {
+        @include font-face("Proxima Nova Condensed Regular", 700, $text-color);
+        text-decoration: none;
+      }
+      img {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+  .logo {
+    width: 19vw;
+    @include position(7vw, 0vh);
+  }
+  .button-call {
+    width: 23vw;
+    display: flex;
+    @include position(17vw, 2vh);
+    justify-content: space-around;
+    img {
+      width: 29px;
+      height: 20px;
+      @include position(0vw, 1vh);
+    }
+    h5 {
+      @include font-face("Proxima Nova Condensed Regular", 700, $text-color);
+      @include position(0vw, 1vh);
+    }
+    button {
+      @include button(15vw, $button-color, 4vh);
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-button-color,
+        1rem
+      );
+    }
+  }
+}
+
+.slider {
+  width: 100vw;
+  height: 60vh;
+  @include background(url("./img/slider/Rectangle\ 137.png"));
+  .left-baner {
+    width: 24vw;
+    height: 50vh;
+    background-color: $background-color;
+    @include position(2.5vw, 0vh);
+    border-left: 15px solid $button-color;
+    h1 {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        3.5rem
+      );
+      text-align: center;
+      @include position(0vw, 5vh);
+    }
+    h3 {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        2rem
+      );
+      text-align: center;
+      @include position(0vw, 10vh);
+    }
+    p {
+      width: 23vw;
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        400,
+        $text-color,
+        2rem
+      );
+      line-height: 3rem;
+      text-align: center;
+      @include position(0.5vw, 10vh);
+    }
+    button {
+      @include button(14vw, $button-color, 4vh);
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-button-color
+      );
+      @include position(20%, 12vh);
+    }
+    .counter {
+      display: flex;
+      @include position(40%, 14vh);
+      h3 {
+        @include position(0vw, 0vh);
+      }
+      h4 {
+        @include font-face(
+          "Proxima Nova Condensed Regular",
+          700,
+          $text-color,
+          1.5rem
+        );
+        line-height: 2rem;
+      }
+    }
+    .arrow {
+      @include position(40%, 14vh);
+    }
+  }
+}
+.our-advantage {
+  .our-advantage-header {
+    width: 100vw;
+    height: 20vh;
+    @include position(40vw, 10vh);
+    h2 {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        3.3rem
+      );
+      position: absolute;
+    }
+    div {
+      width: 20px;
+      height: 50px;
+      background-color: $button-color;
+    }
+  }
+
+  .our-advantage-photo {
+    width: 100vw;
+    height: 27vh;
+    display: flex;
+    justify-content: space-around;
+
+    .first-photo {
+      width: 30vw;
+      @include background(url("./img/переваги/Rectangle\ 172.png"), contain);
+      h3 {
+        width: 27vw;
+        @include font-face(
+          "Proxima Nova Condensed Regular",
+          700,
+          $text-button-color,
+          2rem
+        );
+        @include position(1vw, 20vh);
+        border-bottom: 4px solid $button-color;
+      }
+    }
+    .second-photo {
+      width: 30vw;
+      @include background(url("./img/переваги/Rectangle\ 169.png"), contain);
+
+      h3 {
+        width: 9vw;
+        @include font-face(
+          "Proxima Nova Condensed Regular",
+          700,
+          $text-button-color,
+          2rem
+        );
+        @include position(2vw, 14vh);
+        border-bottom: 4px solid $button-color;
+      }
+      p {
+        @include font-face(
+          "Proxima Nova Condensed Regular",
+          400,
+          $text-button-color,
+          1rem
+        );
+        width: 25vw;
+        @include position(2vw, 14vh);
+        line-height: 1.5rem;
+      }
+    }
+    .third-photo {
+      width: 30vw;
+      @include background(url("./img/переваги/Rectangle\ 170.png"), contain);
+      h3 {
+        @include font-face(
+          "Proxima Nova Condensed Regular",
+          700,
+          $text-button-color,
+          2rem
+        );
+        width: 30vw;
+        @include position(0vw, 20vh);
+        border-bottom: 4px solid $button-color;
+      }
+    }
+  }
+}
+
+.product-categories {
+  .product-categories-header {
+    width: 100vw;
+    height: 20vh;
+    @include position(40vw, 10vh);
+    h2 {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        3.3rem
+      );
+      position: absolute;
+    }
+    div {
+      width: 20px;
+      height: 50px;
+      background-color: $button-color;
+    }
+  }
+  .categories-icons {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    :nth-child(2) {
+      p {
+        border-bottom: 2px solid $button-color;
+      }
+    }
+    p {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        1.5rem
+      );
+      text-align: center;
+    }
+  }
+
+  .categories-photo {
+    .photo-first-line {
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+
+      div {
+        width: 30vw;
+        img {
+          width: 30vw;
+        }
+      }
+    }
+    .photo-second-line {
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      :nth-child(3) {
+        background-color: $button-color;
+        h5,
+        :nth-child(2) {
+          @include font-face(
+            "Proxima Nova Condensed Regular",
+            700,
+            $text-button-color,
+            1.3rem
+          );
+        }
+      }
+      div {
+        width: 30vw;
+
+        img {
+          width: 30vw;
+        }
+      }
+    }
+    .title-bed {
+      display: flex;
+      text-align: center;
+      height: 4vh;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        1.3rem
+      );
+      :nth-child(3) {
+        color: #bcbdbb;
+        text-decoration: line-through;
+      }
+    }
+    h5 {
+      align-self: center;
+    }
+    span {
+      align-self: center;
+    }
+    .sale-color {
+      color: $sale-color;
+    }
+  }
+  button {
+    @include button(10vw, $button-color, 4vh);
+    @include font-face(
+      "Proxima Nova Condensed Regular",
+      700,
+      $text-button-color
+    );
+    @include position(45vw, 5vh);
+  }
+}
+
+.about-us {
+  .about-us-header {
+    width: 100vw;
+    height: 20vh;
+    @include position(45vw, 13vh);
+    h2 {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        3.3rem
+      );
+      position: absolute;
+    }
+    div {
+      width: 20px;
+      height: 50px;
+      background-color: $button-color;
+    }
+  }
+  .about-text-photo {
+    width: 100vw;
+    .about-us-photo {
+      width: 80vw;
+      height: 60vh;
+      @include background(url("./img/проНас/Rectangle\ 174.png"));
+      @include position(20vw, 0vh);
+      .about-us-text {
+        div {
+          width: 40vw;
+          height: 40vh;
+          padding-top: 5rem;
+          background-color: $background-color;
+          overflow: scroll;
+          p {
+            width: 37vw;
+            @include font-face(
+              "Proxima Nova Condensed Regular",
+              400,
+              $text-color,
+              1rem
+            );
+
+            span {
+              @include font-face(
+                "Proxima Nova Condensed Regular",
+                700,
+                $button-color,
+                1rem
+              );
+            }
+            line-height: 1.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.07rem;
+          }
+          border-right: 13px solid $button-color;
+          @include position(-10vw, 5vh);
+        }
+      }
+    }
+  }
+}
+
+.application {
+  .application-header {
+    width: 100vw;
+    height: 20vh;
+    @include position(35vw, 9vh);
+    h2 {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        700,
+        $text-color,
+        3.3rem
+      );
+      position: absolute;
+    }
+    div {
+      width: 20px;
+      height: 50px;
+      background-color: $button-color;
+    }
+  }
+  .application-form-photo {
+    .application-photo {
+      width: 80vw;
+      height: 60vh;
+      @include background(url("./img/формаЗаявки/Rectangle\ 175.png"));
+
+      .application-form {
+        width: 19vw;
+        height: 30vh;
+        padding: 3vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: $background-color;
+        border-left: 10px solid $button-color;
+        @include position(70vw, 15vh);
+        h3 {
+          @include font-face(
+            "Proxima Nova Condensed Regular",
+            700,
+            $text-color,
+            2rem
+          );
+          text-align: center;
+        }
+        input {
+          border: 1px solid #1e2e36;
+          border-radius: 3px;
+          height: 3vh;
+        }
+        button {
+          @include button(19vw, $button-color, 4vh);
+          @include font-face(
+            "Proxima Nova Condensed Regular",
+            700,
+            $text-button-color
+          );
+        }
+        p {
+          @include font-face(
+            "Proxima Nova Condensed Regular",
+            400,
+            $text-color
+          );
+          line-height: 1.2rem;
+          span {
+            @include font-face(
+              "Proxima Nova Condensed Regular",
+              700,
+              $text-color
+            );
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  display: flex;
+}
+.footer-dark-side {
+  width: 40vw;
+  height: 50vh;
+  display: flex;
+  background-color: $color-footer;
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include position(2vw, 2vh);
+    div {
+      display: flex;
+      ul {
+        margin: 1vh;
+        a {
+          @include font-face(
+            "Proxima Nova Condensed Regular",
+            400,
+            $text-button-color
+          );
+          line-height: 2rem;
+          text-decoration: none;
+        }
+      }
+    }
+    span {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        400,
+        $text-button-color
+      );
+    }
+  }
+
+  .contacts-list {
+    ul {
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      @include position(2vw, 15vh);
+      li {
+        @include font-face(
+          "Proxima Nova Condensed Regular",
+          400,
+          $text-button-color
+        );
+      }
+      :nth-child(3) {
+        @include font-face(
+          "Proxima Nova Condensed Regular",
+          400,
+          $button-color
+        );
+      }
+    }
+    span {
+      @include font-face(
+        "Proxima Nova Condensed Regular",
+        400,
+        $text-button-color
+      );
+      @include position(2vw, 25vh);
+    }
+  }
+}
+
+.footer-right {
+  width: 60vw;
+  height: 50vh;
+  @include background(url("./img/футер/Rectangle\ 176.png"));
+}

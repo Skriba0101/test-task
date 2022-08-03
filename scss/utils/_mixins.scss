@@ -1,0 +1,23 @@
+@mixin background($bg-img,$bg-size:cover ) {
+    background-image: $bg-img;
+    background-size: $bg-size;
+    background-repeat: no-repeat;
+}
+
+@mixin font-face($family,$weight,$color,$size:1rem) {
+    font-family: $family,sans-serif;
+    font-weight: $weight;
+    color: $color;
+    font-size: $size;
+}
+@mixin position($left,$top:0vh) {
+    position: relative;
+    top: $top;
+    left: $left;
+}
+@mixin button ($width,$button-color:$button-color,$height:6vh,) {
+    width: $width;
+    height: $height;
+    background-color: $button-color;
+    border: none;
+}
